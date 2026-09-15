@@ -68,7 +68,7 @@ This project was built to practice and demonstrate core front-end concepts witho
 ```bash
 npx serve 
 
-## 👩‍💻 Developer
+👩‍💻 Developer
 
 Name: Ratu Qurratul Aini
 Status: Fullstack Cohort 2026
