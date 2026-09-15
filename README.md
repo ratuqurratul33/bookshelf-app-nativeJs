@@ -1,86 +1,53 @@
 # 📚 Bookshelf App
 
-Aplikasi web sederhana untuk mengelola daftar buku menggunakan **JavaScript Native (Vanilla JS)** tanpa framework.
+A simple client-side book-shelving app built with **Native JavaScript (OOP)** to organize books into "reading" and "finished" shelves — no framework, just plain JS classes and the DOM.
 
 ---
 
-## 🚀 Fitur Utama
-*  Menambahkan buku baru
-*  Dua rak buku:
+## 🚀 Features
 
-  * Belum selesai dibaca
-  * Selesai dibaca
-*  Memindahkan buku antar rak
-*  Menghapus buku
-*  Penyimpanan menggunakan localStorage (data tetap tersimpan)
-*  Pencarian buku berdasarkan judul
-*  Edit data buku
-
----
-
-## 🧠 Teknologi yang Digunakan
-
-Aplikasi ini dibuat menggunakan:
-
-* HTML5
-* CSS3 (diinject via JavaScript)
-* JavaScript Native (Vanilla JS)
-* Web Storage API (localStorage)
+- Add new books with title, author, year, and reading status
+- Two shelves: **Unfinished** and **Finished**
+- Move a book between shelves with one click
+- Edit book details through a modal
+- Delete a book with a confirmation modal
+- Search books by title (debounced live search)
+- Sort books by title, author, or year
+- Import / export book data as JSON
+- Dark mode toggle
+- Persistent storage via `localStorage`
+- Installable as a PWA (offline-ready via Service Worker)
 
 ---
 
-## 📦 Struktur Data Buku
+## 🧠 Tech Stack
 
-Setiap buku disimpan dalam bentuk object:
-
-```js
-{
-  id: number,
-  title: string,
-  author: string,
-  year: number,
-  isComplete: boolean
-}
-```
+- HTML5
+- Tailwind CSS (via CDN)
+- JavaScript (Native, ES6+, OOP with Classes & Modules)
+- Web Storage API (`localStorage`)
+- Service Worker (PWA / offline caching)
 
 ---
 
-## ⚙️ Cara Menjalankan Project
+## 🎯 Project Purpose
 
-### 🔹 Cara 1 (Recommended)
+This project was built to practice and demonstrate core front-end concepts without relying on a framework:
 
-Menggunakan VS Code + Live Server:
-
-1. Install extension **Live Server**
-2. Klik kanan `index.html`
-3. Pilih **Open with Live Server**
-
----
-
-### 🔹 Cara 2 (Manual)
-
-Buka file `index.html` langsung di browser:
-
-```bash
-open index.html
-```
+- **Object-Oriented Programming** — books and app logic modeled as classes/objects instead of loose functions
+- **ES Modules** — code split into cohesive modules (`storage`, `render`, `crud`, `utils`) and wired together with `import`/`export`
+- **DOM Manipulation** — native `createElement`, `querySelector`, and event listeners, no virtual DOM
+- **State Management** — a single in-memory array as the source of truth, synced to `localStorage`
+- **Browser APIs** — Web Storage API, File API (import/export), and Service Worker (offline support)
+- **Security basics** — output escaping to prevent XSS when rendering user input
 
 ---
 
-## 💾 Penyimpanan Data
+## 📌 Notes
 
-Aplikasi menggunakan **localStorage**, sehingga:
-
-* Data tidak hilang saat halaman direfresh
-* Data hanya tersimpan di browser pengguna
-
----
-
-## 📌 Catatan
-
-* Tidak menggunakan framework (React, Vue, dll)
-* Seluruh fitur dibuat menggunakan JavaScript Native
-* Mengikuti standar submission Dicoding
+- No framework used (React, Vue, etc.) — pure native JavaScript
+- Data is stored only in the browser's `localStorage`, per device/browser
+- Requires a local server (e.g. Live Server) to run, since ES Modules do not work over `file://`
 
 ---
 
@@ -88,6 +55,20 @@ Aplikasi menggunakan **localStorage**, sehingga:
 
 <img width="1913" height="904" alt="image" src="https://github.com/user-attachments/assets/678dcd63-cafa-4fde-824a-ed4db8ca89f9" />
 
-
 ---
 
+## ⚙️ How to Build
+
+**Option 1 — Live Server (recommended)**
+1. Install the **Live Server** extension in VS Code
+2. Right-click `index.html`
+3. Select **Open with Live Server**
+
+**Option 2 — Any local static server**
+```bash
+npx serve 
+
+## 👩‍💻 Developer
+
+Name: Ratu Qurratul Aini
+Status: Fullstack Cohort 2026
